@@ -1,0 +1,35 @@
+.navbar_container{
+    background-color: rgb(65, 65, 65);
+    height: 4.688rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_container .navbar_container__content{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_container .navbar_container__content button{
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1rem;
+    transition: 1s;
+}
+
+.navbar_container .navbar_container__content button:hover{
+    border: 1px solid rgb(236, 174, 79);
+    border-radius: 2rem;
+    transform: scale(1.1);
+}
+
+.navbar_container .navbar_container__content button li{
+    color: rgb(236, 174, 79);
+    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    
+}

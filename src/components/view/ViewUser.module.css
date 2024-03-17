@@ -1,0 +1,41 @@
+.view_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view_data{
+    width: 100%;
+    border: 2px solid rgb(228, 228, 228);
+    border-collapse: collapse;
+}
+
+.view_data th,
+.view_data td{
+    padding: 0.625rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.btn{
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn .update_btn{
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(158, 195, 255);
+}
+
+.btn .delete_btn{
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(250, 0, 0);
+}
