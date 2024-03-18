@@ -12,7 +12,7 @@ function UpdateName() {
 
     useEffect(() => {
         let fetchData = async() => {
-            let {data} = await axiosInstance.get(`http://localhost:5000/app/users/${id}`)
+            let {data} = await axiosInstance.get(`/posts/${id}`)
             setUserName(data.userName);
         }
         fetchData();
@@ -24,7 +24,7 @@ function UpdateName() {
         let payload = {
             userName
         }
-        axiosInstance.put(`http://localhost:5000/app/users/${id}`,payload)
+        axiosInstance.put(`/posts/${id}`,payload)
         navigate(`/viewUser`);
     }
 

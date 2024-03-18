@@ -9,7 +9,7 @@ function CreateName() {
         e.preventDefault();
         console.log({userName});
         let payload = {userName};
-        axiosInstance.post("http://localhost:5000/app/users",payload)
+        axiosInstance.post("/posts",payload)
     }
   return (
     <div className={style.createName_container}>

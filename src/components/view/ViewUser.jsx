@@ -12,14 +12,14 @@ function ViewUser() {
 
   useEffect(() => {
     let fetchData = async () => {
-      let { data } = await axiosInstance.get(`http://localhost:5000/app/users`);
+      let { data } = await axiosInstance.get(`/posts`);
       setUserData(data);
     };
     fetchData();
   }, []);
 
   let handleDelete = (id) => {
-    axiosInstance.delete(`http://localhost:5000/app/users/${id}`);
+    axiosInstance.delete(`/posts/${id}`);
     window.location.assign("/viewUser");
   };
 
