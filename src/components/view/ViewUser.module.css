@@ -1,11 +1,49 @@
 .view_container{
     width: 100%;
+    text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: .9rem 0;
 }
 
-.view_data{
+.view_container div h1{
+    margin-bottom: .8rem;
+}
+
+.view_container .view_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.2rem;
+    text-align: center;
+    border: 2px solid rgb(228, 228, 228);
+    margin: 0 2rem;
+}
+
+.view_container .view_content p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.view_btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.view_btn .view_Edit_btn{
+    padding: .2rem 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(147, 207, 237);
+}
+
+.view_btn .view_Delete_btn{
+    padding: .2rem 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(228, 40, 40);
+}
+
+/* .view_data{
     width: 100%;
     border: 2px solid rgb(228, 228, 228);
     border-collapse: collapse;
@@ -38,4 +76,4 @@
     font-weight: 600;
     border: none;
     background-color: rgb(250, 0, 0);
-}
+} */

@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axiosInstance from '../../helpers/axiosInstance';
 
 function UpdateName() {
-    let [userName,setUserName] = useState("");
+    let [user,setUser] = useState("");
 
     const {id} = useParams();
 
@@ -12,32 +12,36 @@ function UpdateName() {
 
     useEffect(() => {
         let fetchData = async() => {
-            let {data} = await axiosInstance.get(`/posts/${id}`)
-            setUserName(data.userName);
+            let {data} = await axiosInstance.get(`http://localhost:5000/app/users/${id}`)
+            console.log(data);
+            setUser(data.user);
         }
         fetchData();
     },[])
 
-    let handleUpdate = (x) => {
-        x.preventDefault();
-        console.log({userName});
+    // let handleChange = (e) => {
+    //     setUserName(e.target.value)
+    // }
+
+    let handleUpdate = async () => {
+        console.log({user});
         let payload = {
-            userName
+            user
         }
-        axiosInstance.put(`/posts/${id}`,payload)
+        await axiosInstance.put(`http://localhost:5000/app/users/${id}`,payload)
         navigate(`/viewUser`);
     }
 
   return (
     <div className={style.update_container}>
-        <form action="">
+        <div>
                 <legend>Update Name</legend>
-                <label htmlFor="userName">User Name : </label>
-                <input type="text" value={userName} name="userName" id="userName" onChange={(e) => {
-                    setUserName(e.target.value)
-                }} /> <br />
-                <button onClick={handleUpdate} className={style.update_btn}>Update</button>
-        </form>
+                <label htmlFor="user">User Name </label>
+                <input type="text" value={user} name='user' id='user' onChange={(e) => {
+        setUser(e.target.value)
+    }} /> <br />
+                <button onClick={handleUpdate} className={style.update_btn}>Edit</button>
+        </div>
     </div>
   )
 }
